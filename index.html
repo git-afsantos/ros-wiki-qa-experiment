@@ -6,6 +6,7 @@
   <!--<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">-->
   <link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
   <link rel="stylesheet" href="files/bootstrap.css">
+  <link rel="stylesheet" href="files/rosqa.css">
   <script src="files/nr-1071.js"></script>
   <!--<script type="text/javascript" async="" src="files/ga.js"></script>-->
   <script src="files/jquery-1.js"></script>
@@ -14,6 +15,7 @@
   <script type="text/javascript" src="files/jquery.js"></script>
   <script type="text/javascript" src="files/seesaw.js"></script>
   <script type="text/javascript" src="files/rosversion.js"></script>
+  <script type="text/javascript" src="files/rosqa.js"></script>
 
   <!--<script type="text/javascript">
   var _gaq = _gaq || [];
@@ -638,10 +640,93 @@ pageTracker._trackPageview();
                       </div>
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
-                          <span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Status: Good </span>
+                          <button id="kineticqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
+                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Status: Good
+                          </button>
                       </div>
 
-                      <p><a href="#">show analysis details</a></p>
+                      <div id="kineticqa-panel" class="dropdown qa-panel">
+                        <p class="qa-header">Summary</p>
+                        <table class="qa-summary-table">
+                          <tbody>
+                            <tr>
+                              <td>Overall Score</td>
+                              <td class="qa-overall-score">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>User Rating</td>
+                              <td class="qa-user-rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <ul class="qa-warnings" style="display:block;">
+                          <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
+                        </ul>
+                        <p class="qa-header">Metrics</p>
+                        <table class="qa-metrics-table">
+                          <thead>
+                            <tr>
+                              <th>Metric</th>
+                              <th>Value</th>
+                              <th>Threshold</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lines of Code</td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Comment/Code Ratio</td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Cyclomatic Complexity</td>
+                              <td></td>
+                              <td>1 - 15</td>
+                            </tr>
+                            <tr>
+                              <td>Coding Style Violations</td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Maintainability Index</td>
+                              <td></td>
+                              <td>1 - 100</td>
+                            </tr>
+                            <tr>
+                              <td>Afferent Coupling</td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Efferent Coupling</td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>Depth of Inheritance</td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
                       <p id="package-info-6">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
                       <p id="package-info-7"></p>

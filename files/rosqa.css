@@ -1,0 +1,41 @@
+.qa-panel {
+    display: none;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 208px;
+    margin-bottom: 1em;
+}
+
+.qa-panel .qa-header {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.qa-panel > ul.qa-warnings {
+    display: none;
+    list-style: none;
+    margin-top: 1em;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: 0;
+}
+
+.qa-panel > .qa-summary-table {
+    width: 50%;
+}
+
+.qa-panel > .qa-metrics-table {
+    width: 90%;
+    margin-bottom: 0.5em;
+}
+
+.qa-panel > .qa-metrics-table tr:nth-child(even) {
+    background-color: #ddd;
+}
