@@ -39,3 +39,8 @@
 .qa-panel > .qa-metrics-table tr:nth-child(even) {
     background-color: #ddd;
 }
+
+.qa-panel > .qa-metrics-table th:not(:first-child),
+.qa-panel > .qa-metrics-table td:not(:first-child) {
+    text-align: center;
+}

@@ -345,10 +345,97 @@ pageTracker._trackPageview();
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;"><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented </span>
                       </div>
 
-                      <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;"><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Status: Good </span>
+                      <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
+                          <button id="groovyqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
+                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
+                          </button>
                       </div>
 
-                      <p><a href="#">show analysis details</a></p>
+                      <div id="groovyqa-panel" class="dropdown qa-panel">
+                        <p class="qa-header">Summary</p>
+                        <table class="qa-summary-table">
+                          <tbody>
+                            <tr>
+                              <td>Overall Score</td>
+                              <td class="qa-overall-score">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>User Rating</td>
+                              <td class="qa-user-rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <ul class="qa-warnings" style="display:block;">
+                          <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
+                        </ul>
+                        <p class="qa-header">Metrics</p>
+                        <table class="qa-metrics-table">
+                          <thead>
+                            <tr>
+                              <th>Metric</th>
+                              <th>Value</th>
+                              <th>Min.</th>
+                              <th>Max.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lines of Code</td>
+                              <td data-metric="loc"></td>
+                              <td>0</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Comment/Code Ratio</td>
+                              <td data-metric="comment_ratio"></td>
+                              <td>20%</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Cyclomatic Complexity (avg.)</td>
+                              <td data-metric="cyclomatic_complexity"></td>
+                              <td>1</td>
+                              <td>15</td>
+                            </tr>
+                            <tr>
+                              <td>Coding Style Violations</td>
+                              <td data-metric="coding_violations"></td>
+                              <td>0</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Maintainability Index</td>
+                              <td data-metric="maintainability_index"></td>
+                              <td>1</td>
+                              <td>100</td>
+                            </tr>
+                            <tr>
+                              <td>Class Coupling (avg.)</td>
+                              <td data-metric="class_coupling"></td>
+                              <td>0</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td>Depth of Inheritance (avg.)</td>
+                              <td data-metric="depth_inheritance"></td>
+                              <td>0</td>
+                              <td>5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
                       <p id="package-info">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
                       <p id="package-info-1"></p>
@@ -429,10 +516,96 @@ pageTracker._trackPageview();
                       </div>
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
-                          <span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Status: Good </span>
+                          <button id="hydroqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
+                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
+                          </button>
                       </div>
 
-                      <p><a href="#">show analysis details</a></p>
+                      <div id="hydroqa-panel" class="dropdown qa-panel">
+                        <p class="qa-header">Summary</p>
+                        <table class="qa-summary-table">
+                          <tbody>
+                            <tr>
+                              <td>Overall Score</td>
+                              <td class="qa-overall-score">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>User Rating</td>
+                              <td class="qa-user-rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <ul class="qa-warnings" style="display:block;">
+                          <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
+                        </ul>
+                        <p class="qa-header">Metrics</p>
+                        <table class="qa-metrics-table">
+                          <thead>
+                            <tr>
+                              <th>Metric</th>
+                              <th>Value</th>
+                              <th>Min.</th>
+                              <th>Max.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lines of Code</td>
+                              <td data-metric="loc"></td>
+                              <td>0</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Comment/Code Ratio</td>
+                              <td data-metric="comment_ratio"></td>
+                              <td>20%</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Cyclomatic Complexity (avg.)</td>
+                              <td data-metric="cyclomatic_complexity"></td>
+                              <td>1</td>
+                              <td>15</td>
+                            </tr>
+                            <tr>
+                              <td>Coding Style Violations</td>
+                              <td data-metric="coding_violations"></td>
+                              <td>0</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Maintainability Index</td>
+                              <td data-metric="maintainability_index"></td>
+                              <td>1</td>
+                              <td>100</td>
+                            </tr>
+                            <tr>
+                              <td>Class Coupling (avg.)</td>
+                              <td data-metric="class_coupling"></td>
+                              <td>0</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td>Depth of Inheritance (avg.)</td>
+                              <td data-metric="depth_inheritance"></td>
+                              <td>0</td>
+                              <td>5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
                       <p id="package-info-2">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
                       <p id="package-info-3"></p>
@@ -534,10 +707,96 @@ pageTracker._trackPageview();
                       </div>
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
-                          <span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Status: Good </span>
+                          <button id="indigoqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
+                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
+                          </button>
                       </div>
 
-                      <p><a href="#">show analysis details</a></p>
+                      <div id="indigoqa-panel" class="dropdown qa-panel">
+                        <p class="qa-header">Summary</p>
+                        <table class="qa-summary-table">
+                          <tbody>
+                            <tr>
+                              <td>Overall Score</td>
+                              <td class="qa-overall-score">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>User Rating</td>
+                              <td class="qa-user-rating">
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <ul class="qa-warnings" style="display:block;">
+                          <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
+                        </ul>
+                        <p class="qa-header">Metrics</p>
+                        <table class="qa-metrics-table">
+                          <thead>
+                            <tr>
+                              <th>Metric</th>
+                              <th>Value</th>
+                              <th>Min.</th>
+                              <th>Max.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Lines of Code</td>
+                              <td data-metric="loc"></td>
+                              <td>0</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Comment/Code Ratio</td>
+                              <td data-metric="comment_ratio"></td>
+                              <td>20%</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Cyclomatic Complexity (avg.)</td>
+                              <td data-metric="cyclomatic_complexity"></td>
+                              <td>1</td>
+                              <td>15</td>
+                            </tr>
+                            <tr>
+                              <td>Coding Style Violations</td>
+                              <td data-metric="coding_violations"></td>
+                              <td>0</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>Maintainability Index</td>
+                              <td data-metric="maintainability_index"></td>
+                              <td>1</td>
+                              <td>100</td>
+                            </tr>
+                            <tr>
+                              <td>Class Coupling (avg.)</td>
+                              <td data-metric="class_coupling"></td>
+                              <td>0</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td>Depth of Inheritance (avg.)</td>
+                              <td data-metric="depth_inheritance"></td>
+                              <td>0</td>
+                              <td>5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
                       <p id="package-info-4">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
                       <p id="package-info-5"></p>
@@ -641,7 +900,7 @@ pageTracker._trackPageview();
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
                           <button id="kineticqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
-                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Status: Good
+                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
                           </button>
                       </div>
 
@@ -680,49 +939,52 @@ pageTracker._trackPageview();
                             <tr>
                               <th>Metric</th>
                               <th>Value</th>
-                              <th>Threshold</th>
+                              <th>Min.</th>
+                              <th>Max.</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>Lines of Code</td>
-                              <td></td>
-                              <td></td>
+                              <td data-metric="loc"></td>
+                              <td>0</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Comment/Code Ratio</td>
-                              <td></td>
-                              <td></td>
+                              <td data-metric="comment_ratio"></td>
+                              <td>20%</td>
+                              <td>-</td>
                             </tr>
                             <tr>
-                              <td>Cyclomatic Complexity</td>
-                              <td></td>
-                              <td>1 - 15</td>
+                              <td>Cyclomatic Complexity (avg.)</td>
+                              <td data-metric="cyclomatic_complexity"></td>
+                              <td>1</td>
+                              <td>15</td>
                             </tr>
                             <tr>
                               <td>Coding Style Violations</td>
-                              <td></td>
-                              <td></td>
+                              <td data-metric="coding_violations"></td>
+                              <td>0</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Maintainability Index</td>
-                              <td></td>
-                              <td>1 - 100</td>
+                              <td data-metric="maintainability_index"></td>
+                              <td>1</td>
+                              <td>100</td>
                             </tr>
                             <tr>
-                              <td>Afferent Coupling</td>
-                              <td></td>
-                              <td></td>
+                              <td>Class Coupling (avg.)</td>
+                              <td data-metric="class_coupling"></td>
+                              <td>0</td>
+                              <td>5</td>
                             </tr>
                             <tr>
-                              <td>Efferent Coupling</td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>Depth of Inheritance</td>
-                              <td></td>
-                              <td></td>
+                              <td>Depth of Inheritance (avg.)</td>
+                              <td data-metric="depth_inheritance"></td>
+                              <td>0</td>
+                              <td>5</td>
                             </tr>
                           </tbody>
                         </table>
