@@ -899,37 +899,36 @@ pageTracker._trackPageview();
                       </div>
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
-                          <button id="kineticqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
-                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
-                          </button>
+                          <span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis </span>
                       </div>
 
-                      <div id="kineticqa-panel" class="dropdown qa-panel">
-                        <p class="qa-header">Summary</p>
-                        <table class="qa-summary-table">
-                          <tbody>
-                            <tr>
-                              <td>Overall Score</td>
-                              <td class="qa-overall-score">
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>User Rating</td>
-                              <td class="qa-user-rating">
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                    <div class="pkg-top-summary">
+                        <p id="package-info-6">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
+                        <p id="package-info-7"></p>
+                        <ul>
+                          <li>Maintainer status: maintained</li>
+                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
+                          <li>Author: Daniel Stonier, Younghun Ju, Jorge Santos Simon</li>
+                          <li>License: BSD</li>
+                          <li>Bug / feature tracker: <a href="https://github.com/yujinrobot/kobuki/issues">https://github.com/yujinrobot/kobuki/issues</a></li>
+                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: kinetic)</li>
+                          <li>QA Score:
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                          </li>
+                          <li>User Rating:
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                          </li>
+                        </ul>
+                    </div>
+                    <div id="kineticqa-panel" class="qa-panel">
                         <ul class="qa-warnings" style="display:block;">
                           <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
                         </ul>
@@ -938,68 +937,58 @@ pageTracker._trackPageview();
                           <thead>
                             <tr>
                               <th>Metric</th>
-                              <th>Value</th>
-                              <th>Min.</th>
-                              <th>Max.</th>
+                              <th>v0.7.6</th>
+                              <th>v0.7.5</th>
+                              <th>v0.7.4</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>Lines of Code</td>
-                              <td data-metric="loc"></td>
-                              <td>0</td>
+                              <td data-metric="loc">1733</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Comment/Code Ratio</td>
-                              <td data-metric="comment_ratio"></td>
-                              <td>20%</td>
+                              <td data-metric="comment_ratio">33.3%</td>
+                              <td><span class="bad-metric" title="bad metric example">10%</span></td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Cyclomatic Complexity (avg.)</td>
-                              <td data-metric="cyclomatic_complexity"></td>
-                              <td>1</td>
-                              <td>15</td>
+                              <td data-metric="cyclomatic_complexity">3</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Coding Style Violations</td>
-                              <td data-metric="coding_violations"></td>
-                              <td>0</td>
+                              <td data-metric="coding_violations">615</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Maintainability Index</td>
-                              <td data-metric="maintainability_index"></td>
-                              <td>1</td>
-                              <td>100</td>
+                              <td data-metric="maintainability_index">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Class Coupling (avg.)</td>
-                              <td data-metric="class_coupling"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="class_coupling">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Depth of Inheritance (avg.)</td>
-                              <td data-metric="depth_inheritance"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="depth_inheritance">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
+                    </div>
 
-                      <p id="package-info-6">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
-                      <p id="package-info-7"></p>
-                      <ul>
-                          <li>Maintainer status: maintained</li>
-                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
-                          <li>Author: Daniel Stonier, Younghun Ju, Jorge Santos Simon</li>
-                          <li>License: BSD</li>
-                          <li>Bug / feature tracker: <a href="https://github.com/yujinrobot/kobuki/issues">https://github.com/yujinrobot/kobuki/issues</a></li>
-                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: kinetic)</li>
-                      </ul>
                   </div>
 
 

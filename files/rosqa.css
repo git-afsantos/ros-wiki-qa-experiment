@@ -1,12 +1,10 @@
+.pkg-top-summary {
+    margin-right: 208px;
+}
+
 .qa-panel {
-    display: none;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    background-color: #eee;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-right: 208px;
-    margin-bottom: 1em;
 }
 
 .qa-panel .qa-header {
@@ -27,12 +25,8 @@
     text-indent: 0;
 }
 
-.qa-panel > .qa-summary-table {
-    width: 50%;
-}
-
 .qa-panel > .qa-metrics-table {
-    width: 90%;
+    width: 95%;
     margin-bottom: 0.5em;
 }
 
@@ -43,4 +37,9 @@
 .qa-panel > .qa-metrics-table th:not(:first-child),
 .qa-panel > .qa-metrics-table td:not(:first-child) {
     text-align: center;
+}
+
+.qa-panel > .qa-metrics-table .bad-metric {
+    font-weight: bold;
+    color: firebrick;
 }
