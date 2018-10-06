@@ -15,7 +15,6 @@
   <script type="text/javascript" src="files/jquery.js"></script>
   <script type="text/javascript" src="files/seesaw.js"></script>
   <script type="text/javascript" src="files/rosversion.js"></script>
-  <script type="text/javascript" src="files/rosqa.js"></script>
 
   <!--<script type="text/javascript">
   var _gaq = _gaq || [];
@@ -346,37 +345,35 @@ pageTracker._trackPageview();
                       </div>
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
-                          <button id="groovyqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
-                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
-                          </button>
+                          <span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis </span>
                       </div>
 
-                      <div id="groovyqa-panel" class="dropdown qa-panel">
-                        <p class="qa-header">Summary</p>
-                        <table class="qa-summary-table">
-                          <tbody>
-                            <tr>
-                              <td>Overall Score</td>
-                              <td class="qa-overall-score">
+                      <div class="pkg-top-summary">
+                        <p id="package-info">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
+                        <p id="package-info-1"></p>
+                        <ul>
+                          <li>Maintainer status: developed</li>
+                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
+                          <li>Author: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;, Younghun Ju &lt;younghoon.ju AT yujinrobot DOT com&gt;, Jorge Santos Simon &lt;jorge AT yujinrobot DOT com&gt;</li>
+                          <li>License: BSD</li>
+                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: groovy-devel)</li>
+                          <li>QA Score:
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>User Rating</td>
-                              <td class="qa-user-rating">
+                          </li>
+                          <li>User Rating:
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="groovyqa-panel" class="qa-panel">
                         <ul class="qa-warnings" style="display:block;">
                           <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
                         </ul>
@@ -385,67 +382,57 @@ pageTracker._trackPageview();
                           <thead>
                             <tr>
                               <th>Metric</th>
-                              <th>Value</th>
-                              <th>Min.</th>
-                              <th>Max.</th>
+                              <th><span title="v0.2.4">Latest</span></th>
+                              <th>v0.2.3</th>
+                              <th>v0.2.2</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>Lines of Code</td>
-                              <td data-metric="loc"></td>
-                              <td>0</td>
+                              <td data-metric="loc">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Comment/Code Ratio</td>
-                              <td data-metric="comment_ratio"></td>
-                              <td>20%</td>
+                              <td data-metric="comment_ratio">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Cyclomatic Complexity (avg.)</td>
-                              <td data-metric="cyclomatic_complexity"></td>
-                              <td>1</td>
-                              <td>15</td>
+                              <td data-metric="cyclomatic_complexity">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Coding Style Violations</td>
-                              <td data-metric="coding_violations"></td>
-                              <td>0</td>
+                              <td data-metric="coding_violations">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Maintainability Index</td>
-                              <td data-metric="maintainability_index"></td>
-                              <td>1</td>
-                              <td>100</td>
+                              <td data-metric="maintainability_index">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Class Coupling (avg.)</td>
-                              <td data-metric="class_coupling"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="class_coupling">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Depth of Inheritance (avg.)</td>
-                              <td data-metric="depth_inheritance"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="depth_inheritance">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-
-                      <p id="package-info">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
-                      <p id="package-info-1"></p>
-                      <ul>
-                          <li>Maintainer status: developed</li>
-                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
-                          <li>Author: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;, Younghun Ju &lt;younghoon.ju AT yujinrobot DOT com&gt;, Jorge Santos Simon &lt;jorge AT yujinrobot DOT com&gt;</li>
-                          <li>License: BSD</li>
-                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: groovy-devel)</li>
-                      </ul>
                   </div>
                   <div class="version hydro" style="display: none;"><em><strong><a href="http://wiki.ros.org/kobuki?distro=hydro">kobuki</a></strong>: <a href="http://wiki.ros.org/kobuki_auto_docking?distro=hydro">kobuki_auto_docking</a> | <a href="http://wiki.ros.org/kobuki_bumper2pc?distro=hydro">kobuki_bumper2pc</a> | <a href="http://wiki.ros.org/kobuki_controller_tutorial?distro=hydro">kobuki_controller_tutorial</a> | <a href="http://wiki.ros.org/kobuki_description?distro=hydro">kobuki_description</a> | <a href="http://wiki.ros.org/kobuki_keyop?distro=hydro">kobuki_keyop</a> | kobuki_node | <a href="http://wiki.ros.org/kobuki_random_walker?distro=hydro">kobuki_random_walker</a> | <a href="http://wiki.ros.org/kobuki_safety_controller?distro=hydro">kobuki_safety_controller</a> | <a href="http://wiki.ros.org/kobuki_testsuite?distro=hydro">kobuki_testsuite</a></em>
                       <br>
@@ -521,32 +508,33 @@ pageTracker._trackPageview();
                           </button>
                       </div>
 
-                      <div id="hydroqa-panel" class="dropdown qa-panel">
-                        <p class="qa-header">Summary</p>
-                        <table class="qa-summary-table">
-                          <tbody>
-                            <tr>
-                              <td>Overall Score</td>
-                              <td class="qa-overall-score">
+                      <div class="pkg-top-summary">
+                        <p id="package-info-2">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
+                        <p id="package-info-3"></p>
+                        <ul>
+                          <li>Maintainer status: developed</li>
+                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
+                          <li>Author: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;, Younghun Ju &lt;yhju AT yujinrobot DOT com&gt;, Jorge Santos Simon &lt;jorge AT yujinrobot DOT com&gt;</li>
+                          <li>License: BSD</li>
+                          <li>Bug / feature tracker: <a href="https://github.com/yujinrobot/kobuki/issues">https://github.com/yujinrobot/kobuki/issues</a></li>
+                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: hydro)</li>
+                          <li>QA Score:
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>User Rating</td>
-                              <td class="qa-user-rating">
+                          </li>
+                          <li>User Rating:
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
                                 <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="hydroqa-panel" class="qa-panel">
                         <ul class="qa-warnings" style="display:block;">
                           <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
                         </ul>
@@ -555,68 +543,57 @@ pageTracker._trackPageview();
                           <thead>
                             <tr>
                               <th>Metric</th>
-                              <th>Value</th>
-                              <th>Min.</th>
-                              <th>Max.</th>
+                              <th><span title="v0.6.8">Latest</span></th>
+                              <th>v0.6.7</th>
+                              <th>v0.6.6</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>Lines of Code</td>
-                              <td data-metric="loc"></td>
-                              <td>0</td>
+                              <td data-metric="loc">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Comment/Code Ratio</td>
-                              <td data-metric="comment_ratio"></td>
-                              <td>20%</td>
+                              <td data-metric="comment_ratio">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Cyclomatic Complexity (avg.)</td>
-                              <td data-metric="cyclomatic_complexity"></td>
-                              <td>1</td>
-                              <td>15</td>
+                              <td data-metric="cyclomatic_complexity">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Coding Style Violations</td>
-                              <td data-metric="coding_violations"></td>
-                              <td>0</td>
+                              <td data-metric="coding_violations">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Maintainability Index</td>
-                              <td data-metric="maintainability_index"></td>
-                              <td>1</td>
-                              <td>100</td>
+                              <td data-metric="maintainability_index">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Class Coupling (avg.)</td>
-                              <td data-metric="class_coupling"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="class_coupling">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Depth of Inheritance (avg.)</td>
-                              <td data-metric="depth_inheritance"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="depth_inheritance">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-
-                      <p id="package-info-2">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
-                      <p id="package-info-3"></p>
-                      <ul>
-                          <li>Maintainer status: developed</li>
-                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
-                          <li>Author: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;, Younghun Ju &lt;yhju AT yujinrobot DOT com&gt;, Jorge Santos Simon &lt;jorge AT yujinrobot DOT com&gt;</li>
-                          <li>License: BSD</li>
-                          <li>Bug / feature tracker: <a href="https://github.com/yujinrobot/kobuki/issues">https://github.com/yujinrobot/kobuki/issues</a></li>
-                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: hydro)</li>
-                      </ul>
                   </div>
                   <div class="version indigo" style="display: none;"><em><strong><a href="http://wiki.ros.org/kobuki?distro=indigo">kobuki</a></strong>: <a href="http://wiki.ros.org/kobuki_auto_docking?distro=indigo">kobuki_auto_docking</a> | <a href="http://wiki.ros.org/kobuki_bumper2pc?distro=indigo">kobuki_bumper2pc</a> | <a href="http://wiki.ros.org/kobuki_capabilities?distro=indigo">kobuki_capabilities</a> | <a href="http://wiki.ros.org/kobuki_controller_tutorial?distro=indigo">kobuki_controller_tutorial</a> | <a href="http://wiki.ros.org/kobuki_description?distro=indigo">kobuki_description</a> | <a href="http://wiki.ros.org/kobuki_keyop?distro=indigo">kobuki_keyop</a> | kobuki_node | <a href="http://wiki.ros.org/kobuki_random_walker?distro=indigo">kobuki_random_walker</a> | <a class="nonexistent" href="http://wiki.ros.org/kobuki_rapps?distro=indigo">kobuki_rapps</a> | <a href="http://wiki.ros.org/kobuki_safety_controller?distro=indigo">kobuki_safety_controller</a> | <a href="http://wiki.ros.org/kobuki_testsuite?distro=indigo">kobuki_testsuite</a></em>
                       <br>
@@ -707,37 +684,36 @@ pageTracker._trackPageview();
                       </div>
 
                       <div class="dropdown" style="display: inline-block; margin-bottom: 8px; margin-right: 4px;">
-                          <button id="indigoqa" class="badge" style="background-color: #5cb85c; border: none;" title="Show Quality Assurance details." onclick="ROSQA.showDetails(this);">
-                            <span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis
-                          </button>
+                          <span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> QA Analysis </span>
                       </div>
 
-                      <div id="indigoqa-panel" class="dropdown qa-panel">
-                        <p class="qa-header">Summary</p>
-                        <table class="qa-summary-table">
-                          <tbody>
-                            <tr>
-                              <td>Overall Score</td>
-                              <td class="qa-overall-score">
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>User Rating</td>
-                              <td class="qa-user-rating">
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="pkg-top-summary">
+                        <p id="package-info-4">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
+                        <p id="package-info-5"></p>
+                        <ul>
+                          <li>Maintainer status: developed</li>
+                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
+                          <li>Author: Daniel Stonier, Younghun Ju, Jorge Santos Simon</li>
+                          <li>License: BSD</li>
+                          <li>Bug / feature tracker: <a href="https://github.com/yujinrobot/kobuki/issues">https://github.com/yujinrobot/kobuki/issues</a></li>
+                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: indigo)</li>
+                          <li>QA Score:
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                          </li>
+                          <li>User Rating:
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-star-empty"></span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="indigoqa-panel" class="qa-panel">
                         <ul class="qa-warnings" style="display:block;">
                           <li><span class="glyphicon glyphicon-warning-sign"></span> Warnings for important defects (e.g. missing README).</li>
                         </ul>
@@ -746,68 +722,57 @@ pageTracker._trackPageview();
                           <thead>
                             <tr>
                               <th>Metric</th>
-                              <th>Value</th>
-                              <th>Min.</th>
-                              <th>Max.</th>
+                              <th><span title="v0.7.6">Latest</span></th>
+                              <th>v0.7.5</th>
+                              <th>v0.7.4</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td>Lines of Code</td>
-                              <td data-metric="loc"></td>
-                              <td>0</td>
+                              <td data-metric="loc">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Comment/Code Ratio</td>
-                              <td data-metric="comment_ratio"></td>
-                              <td>20%</td>
+                              <td data-metric="comment_ratio">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Cyclomatic Complexity (avg.)</td>
-                              <td data-metric="cyclomatic_complexity"></td>
-                              <td>1</td>
-                              <td>15</td>
+                              <td data-metric="cyclomatic_complexity">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Coding Style Violations</td>
-                              <td data-metric="coding_violations"></td>
-                              <td>0</td>
+                              <td data-metric="coding_violations">-</td>
+                              <td>-</td>
                               <td>-</td>
                             </tr>
                             <tr>
                               <td>Maintainability Index</td>
-                              <td data-metric="maintainability_index"></td>
-                              <td>1</td>
-                              <td>100</td>
+                              <td data-metric="maintainability_index">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Class Coupling (avg.)</td>
-                              <td data-metric="class_coupling"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="class_coupling">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                             <tr>
                               <td>Depth of Inheritance (avg.)</td>
-                              <td data-metric="depth_inheritance"></td>
-                              <td>0</td>
-                              <td>5</td>
+                              <td data-metric="depth_inheritance">-</td>
+                              <td>-</td>
+                              <td>-</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-
-                      <p id="package-info-4">ROS nodelet for Kobuki: ROS wrapper for the Kobuki driver.</p>
-                      <p id="package-info-5"></p>
-                      <ul>
-                          <li>Maintainer status: developed</li>
-                          <li>Maintainer: Daniel Stonier &lt;stonier AT yujinrobot DOT com&gt;</li>
-                          <li>Author: Daniel Stonier, Younghun Ju, Jorge Santos Simon</li>
-                          <li>License: BSD</li>
-                          <li>Bug / feature tracker: <a href="https://github.com/yujinrobot/kobuki/issues">https://github.com/yujinrobot/kobuki/issues</a></li>
-                          <li>Source: git <a href="https://github.com/yujinrobot/kobuki">https://github.com/yujinrobot/kobuki.git</a> (branch: indigo)</li>
-                      </ul>
                   </div>
                   <div class="version kinetic" style="display: block;"><em><strong><a href="http://wiki.ros.org/kobuki?distro=kinetic">kobuki</a></strong>: <a href="http://wiki.ros.org/kobuki_auto_docking?distro=kinetic">kobuki_auto_docking</a> | <a href="http://wiki.ros.org/kobuki_bumper2pc?distro=kinetic">kobuki_bumper2pc</a> | <a href="http://wiki.ros.org/kobuki_capabilities?distro=kinetic">kobuki_capabilities</a> | <a href="http://wiki.ros.org/kobuki_controller_tutorial?distro=kinetic">kobuki_controller_tutorial</a> | <a href="http://wiki.ros.org/kobuki_description?distro=kinetic">kobuki_description</a> | <a href="http://wiki.ros.org/kobuki_keyop?distro=kinetic">kobuki_keyop</a> | kobuki_node | <a href="http://wiki.ros.org/kobuki_random_walker?distro=kinetic">kobuki_random_walker</a> | <a class="nonexistent" href="http://wiki.ros.org/kobuki_rapps?distro=kinetic">kobuki_rapps</a> | <a href="http://wiki.ros.org/kobuki_safety_controller?distro=kinetic">kobuki_safety_controller</a> | <a href="http://wiki.ros.org/kobuki_testsuite?distro=kinetic">kobuki_testsuite</a></em>
                       <br>
@@ -937,7 +902,7 @@ pageTracker._trackPageview();
                           <thead>
                             <tr>
                               <th>Metric</th>
-                              <th>v0.7.6</th>
+                              <th><span title="v0.7.6">Latest</span></th>
                               <th>v0.7.5</th>
                               <th>v0.7.4</th>
                             </tr>
